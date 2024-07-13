@@ -46,7 +46,7 @@ resource "aws_instance" "ACN_Server" {
     Name = "ACN-Server-${count.index + 1}"
   }
 
-  user_data = file("files/user_data.sh")
+  user_data = file("files/acn.sh")
 
   count = 1
 }
@@ -62,7 +62,7 @@ resource "aws_instance" "Ansible_Client" {
     Name = "Ansible-Client-${count.index + 1}"
   }
 
-  user_data = file("files/user_data.sh")
+  user_data = file("files/ans-client.sh")
 
   count = 3
 }
@@ -78,7 +78,7 @@ resource "aws_instance" "jumpbox" {
     Name = "Jumpbox-Server"
   }
 
-  user_data = file("files/user_data.sh")
+  user_data = file("files/ans-client.sh")
 
 }
 resource "aws_subnet" "ansible_subnet" {

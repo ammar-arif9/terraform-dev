@@ -13,4 +13,4 @@ echo "admin ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 sed -i 's/^PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 systemctl restart sshd
 
-dnf upgrade -y
+dnf upgrade -y && dnf update -y
