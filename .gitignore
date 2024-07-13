@@ -7,7 +7,7 @@
 #*.tfvars.json
 
 # Ignore Terraform directories
-.terraform/
+**/.terraform/*
 .terraform.lock.hcl
 
 # Ignore crash logs
