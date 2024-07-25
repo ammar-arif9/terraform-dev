@@ -1,17 +1,6 @@
-variable "vpc_name" {
-  description = "VPC Name"
-  type        = string
-  default     = "dev-vpc"
-}
-variable "cidr" {
-  description = "VPC Name"
-  type        = string
-  default     = "10.0.0.0/16"
-}
 variable "key_name" {
   description = "VPC Name"
   type        = string
-  default     = "jumpbox_key"
 }
 variable "ami_id" {
   description = "Ami ID"
